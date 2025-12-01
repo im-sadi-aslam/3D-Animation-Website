@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STELLAR | Premium 3D Animation Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+   
+</head>
+<body data-theme="dark">
+    <div class="bg-elements">
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+    </div>
+    <nav class="nav" id="navbar">
+        <div class="nav-inner">
+            <div class="brand">
+                <div class="logo">S</div>
+                <div>
+                    <h1>STELLAR</h1>
+                    <div class="muted" style="font-size:12px">PREMIUM 3D ANIMATION STUDIO</div>
+                </div>
+            </div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#effects">3D Effects</a>
+                <a href="#movies">Movies</a>
+                <a href="#tickets">Tickets</a>
+                <a class="cta" href="#watch">Watch Now</a>
+            </div>
+            <div class="controls">
+                <button id="themeBtn" title="Toggle theme" style="background:var(--glass);border:0;padding:8px;border-radius:8px;cursor:pointer">🌓</button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="eyebrow">IMMERSIVE 3D EXPERIENCE</div>
+                <h1 class="title">AURORA: BEYOND THE STARS</h1>
+                <p class="subtitle">Embark on an extraordinary journey through mystical realms in our latest 3D animated masterpiece. Experience breathtaking visuals, compelling storytelling, and cutting-edge animation technology.</p>
+                
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="openModal(ASSETS.trailer)">
+                        <i class="fas fa-play"></i> Watch Trailer
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('tickets')">
+                        <i class="fas fa-ticket-alt"></i> Book Tickets
+                    </button>
+                </div>
+
+                <div style="margin-top: 40px; display: flex; gap: 20px; flex-wrap: wrap;">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-star" style="color: var(--accent3);"></i>
+                        <span>IMAX 3D Experience</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-award" style="color: var(--accent3);"></i>
+                        <span>Award-Winning Animation</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-clock" style="color: var(--accent3);"></i>
+                        <span>1h 52m Runtime</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="poster-container">
+                <div class="poster" id="bigPoster" onmousemove="posterTilt(event)" onmouseleave="posterReset()" onclick="openModal(ASSETS.trailer)">
+                    <div class="badge">PREMIERE</div>
+                    <img id="bigPosterImg" src="https://images.unsplash.com/photo-1635805737707-575885ab0820?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Aurora: Beyond the Stars">
+                    <div class="meta">AURORA • 2025</div>
+                    <div class="play-btn" title="Play trailer"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="effects-section" id="effects">
+        <div class="section-header">
+            <h2 class="section-title">IMMERSIVE 3D EFFECTS</h2>
+            <p class="section-subtitle">Experience our cutting-edge 3D animation technology</p>
+        </div>
+        <div class="effects-grid">
+            <div class="effect-card">
+                <h3 style="margin-bottom: 20px;">3D Card Flip with Image</h3>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Movie Scene">
+                            <div class="flip-content">
+                                <h4>AURORA</h4>
+                                <p>Hover to flip</p>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Character">
+                            <h4>BEYOND THE STARS</h4>
+                            <p>An epic 3D adventure</p>
+                            <p style="margin-top: 10px; font-size: 12px;">Coming 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="effect-card">
+                <h3 style="margin-bottom: 20px;">3D Rotating Cube with Images</h3>
+                <div class="cube-container">
+                    <div class="cube">
+                        <div class="cube-face">
+                            <img src="https://lh3.googleusercontent.com/proxy/AwFJ68oMzuNeo8rMQCrcKxfYl0GhQUtfdhCXZU4qY_rOUmnVnMaq5t-nB5ibIF7CgzPzzBIdyK5rxY5hiE-CFFaI5_UMpJPrmW_Z" alt="Oceanus" alt="Scene 1">
+                        </div>
+                        <div class="cube-face">
+                            <img src="https://m.media-amazon.com/images/M/MV5BMGUwMmIyMzgtMDA2Mi00ZmJkLTljNjItY2E1YWIyYTVlMGY2XkEyXkFqcGc@._V1_.jpg" alt="Scene 2">
+                        </div>
+                        <div class="cube-face">
+                            <img src="https://static0.moviewebimages.com/wordpress/wp-content/uploads/article-content/Yp2dnip4iF0JzV2qKTOupw77kvauYB.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="Oceanus" alt="Scene 3">
+                        </div>
+                        <div class="cube-face">
+                            <img src="https://lh3.googleusercontent.com/proxy/AwFJ68oMzuNeo8rMQCrcKxfYl0GhQUtfdhCXZU4qY_rOUmnVnMaq5t-nB5ibIF7CgzPzzBIdyK5rxY5hiE-CFFaI5_UMpJPrmW_Z" alt="Scene 4">
+                        </div>
+                        <div class="cube-face">
+                            <img src="https://m.media-amazon.com/images/M/MV5BMGUwMmIyMzgtMDA2Mi00ZmJkLTljNjItY2E1YWIyYTVlMGY2XkEyXkFqcGc@._V1_.jpg" alt="Scene 5">
+                        </div>
+                        <div class="cube-face">
+                            <img src="https://static0.moviewebimages.com/wordpress/wp-content/uploads/article-content/Yp2dnip4iF0JzV2qKTOupw77kvauYB.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="Oceanus" alt="Scene 6">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="effect-card">
+                <h3 style="margin-bottom: 20px;">3D Spinning Text</h3>
+                <div class="spinning-text">STELLAR</div>
+                <p style="margin-top: 20px; text-align: center;">Premium 3D Animation</p>
+            </div>
+
+            <div class="effect-card">
+                <h3 style="margin-bottom: 20px;">3D Image Carousel</h3>
+                <p style="text-align: center; margin-bottom: 15px;">Click on any image to open it</p>
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-item" onclick="openLightbox(0)">
+                            <img src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Movie Scene 1">
+                        </div>
+                        <div class="carousel-item" onclick="openLightbox(1)">
+                            <img src="https://m.media-amazon.com/images/M/MV5BMGUwMmIyMzgtMDA2Mi00ZmJkLTljNjItY2E1YWIyYTVlMGY2XkEyXkFqcGc@._V1_.jpg" alt="Movie Scene 2">
+                        </div>
+                        <div class="carousel-item" onclick="openLightbox(2)">
+                            <img src="https://lh3.googleusercontent.com/proxy/AwFJ68oMzuNeo8rMQCrcKxfYl0GhQUtfdhCXZU4qY_rOUmnVnMaq5t-nB5ibIF7CgzPzzBIdyK5rxY5hiE-CFFaI5_UMpJPrmW_Z" alt="Movie Scene 3">
+                        </div>
+                        <div class="carousel-item" onclick="openLightbox(3)">
+                            <img src="https://m.media-amazon.com/images/M/MV5BMGUwMmIyMzgtMDA2Mi00ZmJkLTljNjItY2E1YWIyYTVlMGY2XkEyXkFqcGc@._V1_.jpg" alt="Movie Scene 4">
+                        </div>
+                        <div class="carousel-item" onclick="openLightbox(4)">
+                            <img src="https://static0.moviewebimages.com/wordpress/wp-content/uploads/article-content/Yp2dnip4iF0JzV2qKTOupw77kvauYB.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="Movie Scene 5">
+                        </div>
+                        <div class="carousel-item" onclick="openLightbox(5)">
+                            <img src="https://lh3.googleusercontent.com/proxy/AwFJ68oMzuNeo8rMQCrcKxfYl0GhQUtfdhCXZU4qY_rOUmnVnMaq5t-nB5ibIF7CgzPzzBIdyK5rxY5hiE-CFFaI5_UMpJPrmW_Z" alt="Movie Scene 6">
+                        </div>
+                        <div class="carousel-item" onclick="openLightbox(6)">
+                            <img src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Movie Scene 7">
+                        </div>
+                        <div class="carousel-item" onclick="openLightbox(7)">
+                            <img src="https://static0.moviewebimages.com/wordpress/wp-content/uploads/article-content/Yp2dnip4iF0JzV2qKTOupw77kvauYB.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="Oceanus" alt="Movie Scene 8">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="movies">
+        <div class="section-header">
+            <h2 class="section-title">FEATURED MOVIES</h2>
+            <p class="section-subtitle">Explore our collection of breathtaking 3D animated films</p>
+        </div>
+        <div class="movies-grid">
+            <div class="movie-card" onmousemove="tilt(event,this)" onmouseleave="resetTilt(this)" onclick="openLightbox(0)">
+                <img src="https://images.unsplash.com/photo-1635805737707-575885ab0820?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Aurora">
+                <h3>Aurora: Beyond the Stars</h3>
+                <p class="meta">Fantasy • 1h 52m • PG</p>
+                <p class="description">A young explorer discovers a hidden universe where light and darkness battle for control, and she must harness her inner strength to restore balance.</p>
+            </div>
+
+            <div class="movie-card" onmousemove="tilt(event,this)" onmouseleave="resetTilt(this)" onclick="openLightbox(1)">
+                <img src="https://m.media-amazon.com/images/M/MV5BMGUwMmIyMzgtMDA2Mi00ZmJkLTljNjItY2E1YWIyYTVlMGY2XkEyXkFqcGc@._V1_.jpg" alt="Nightfall">
+                <h3>Nightfall Chronicles</h3>
+                <p class="meta">Adventure • 2h 15m • PG</p>
+                <p class="description">In a world where night lasts forever, a group of heroes embarks on a quest to retrieve the stolen Sunstone and restore daylight to their kingdom.</p>
+            </div>
+
+            <div class="movie-card" onmousemove="tilt(event,this)" onmouseleave="resetTilt(this)" onclick="openLightbox(2)">
+                <img src="https://static0.moviewebimages.com/wordpress/wp-content/uploads/article-content/Yp2dnip4iF0JzV2qKTOupw77kvauYB.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="Oceanus">
+                <h3>Oceanus: Deep Blue</h3>
+                <p class="meta">Adventure • 1h 48m • PG</p>
+                <p class="description">Dive into the mysterious depths of an underwater civilization where ancient secrets and magical creatures await discovery.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section tickets-section" id="tickets">
+        <div class="section-header">
+            <h2 class="section-title">BOOK YOUR 3D EXPERIENCE</h2>
+            <p class="section-subtitle">Reserve your seats for an immersive cinematic journey</p>
+        </div>
+        <div class="tickets-container">
+            <div class="booking-process">
+                <div class="booking-step">
+                    <div class="step-header">
+                        <div class="step-number">1</div>
+                        <h3 class="step-title">Select Movie</h3>
+                    </div>
+                    <div class="movie-selection">
+                        <div class="movie-option" onclick="selectMovie(this, 'Aurora: Beyond the Stars')">
+                            <img src="https://images.unsplash.com/photo-1635805737707-575885ab0820?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Aurora">
+                            <h4>Aurora: Beyond the Stars</h4>
+                            <p>1h 52m • PG</p>
+                        </div>
+                        <div class="movie-option" onclick="selectMovie(this, 'Nightfall Chronicles')">
+                            <img src="https://m.media-amazon.com/images/M/MV5BMGUwMmIyMzgtMDA2Mi00ZmJkLTljNjItY2E1YWIyYTVlMGY2XkEyXkFqcGc@._V1_.jpg" alt="Nightfall">
+                            <h4>Nightfall Chronicles</h4>
+                            <p>2h 15m • PG</p>
+                        </div>
+                        <div class="movie-option" onclick="selectMovie(this, 'Oceanus: Deep Blue')">
+                            <img src="https://static0.moviewebimages.com/wordpress/wp-content/uploads/article-content/Yp2dnip4iF0JzV2qKTOupw77kvauYB.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="Oceanus" alt="Oceanus">
+                            <h4>Oceanus: Deep Blue</h4>
+                            <p>1h 48m • PG</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="booking-step">
+                    <div class="step-header">
+                        <div class="step-number">2</div>
+                        <h3 class="step-title">Select Showtime</h3>
+                    </div>
+                    <div class="time-selection">
+                        <div class="time-option" onclick="selectTime(this, '12:00 PM')">12:00 PM</div>
+                        <div class="time-option" onclick="selectTime(this, '3:30 PM')">3:30 PM</div>
+                        <div class="time-option" onclick="selectTime(this, '6:45 PM')">6:45 PM</div>
+                        <div class="time-option" onclick="selectTime(this, '9:15 PM')">9:15 PM</div>
+                    </div>
+                </div>
+
+                <div class="booking-step">
+                    <div class="step-header">
+                        <div class="step-number">3</div>
+                        <h3 class="step-title">Choose Your Seats</h3>
+                    </div>
+                    <div class="seat-selection">
+                        <div class="screen">SCREEN</div>
+                        <div class="seats-container" id="seatsContainer">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="booking-step">
+                    <div class="step-header">
+                        <div class="step-number">4</div>
+                        <h3 class="step-title">Confirm Booking</h3>
+                    </div>
+                    <div class="booking-summary">
+                        <div class="summary-item">
+                            <span>Movie:</span>
+                            <span id="summaryMovie">-</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Showtime:</span>
+                            <span id="summaryTime">-</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Seats:</span>
+                            <span id="summarySeats">-</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Tickets:</span>
+                            <span id="summaryTickets">0</span>
+                        </div>
+                        <div class="summary-item total">
+                            <span>Total:</span>
+                            <span id="summaryTotal">$0.00</span>
+                        </div>
+                    </div>
+                    <button class="confirm-booking" onclick="confirmBooking()">Confirm Booking</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>STELLAR ANIMATION STUDIOS</h3>
+                <p class="muted">Creating immersive 3D animated stories that transport audiences to magical worlds. Our cutting-edge technology and artistic vision bring unforgettable characters and environments to life.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Explore</h4>
+                    <a href="#home">Home</a>
+                    <a href="#effects">3D Effects</a>
+                    <a href="#movies">Movies</a>
+                    <a href="#tickets">Tickets</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <a href="#">About Us</a>
+                    <a href="#">Careers</a>
+                    <a href="#">News</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <a href="#">FAQ</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Help Center</a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2025 Stellar Animation Studios. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="modal" class="modal" onclick="closeModal(event)">
+        <div class="modal-content">
+            <div class="modal-close" onclick="closeModal(event)">&times;</div>
+            <iframe id="modalFrame" src="" allowfullscreen allow="autoplay; fullscreen"></iframe>
+        </div>
+    </div>
+
+    <div id="lightbox" class="modal" onclick="closeLightbox(event)">
+        <div class="modal-content" style="max-width:1100px;max-height:820px;display:flex;align-items:center;justify-content:center">
+            <div class="modal-close" onclick="closeLightbox(event)">&times;</div>
+            <span class="modal-nav" onclick="lbPrev(event)">&#10094;</span>
+            <img id="lbImg" src="" style="max-width:90%;max-height:86%;border-radius:8px">
+            <span class="modal-nav right" onclick="lbNext(event)">&#10095;</span>
+        </div>
+    </div>
+
+
+
+</body>
+<script src="app.js"></script>
+</html>
